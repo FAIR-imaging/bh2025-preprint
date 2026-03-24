@@ -11,36 +11,28 @@ tags:
 authors:
   - name: Diana Chiang
     affiliation: 1
-    role: Writing – original draft
   - name: Pavankumar Videm
     affiliation: 1
-    role: Writing – original draft
   - name: David Lopez Tabernero
     affiliation: 1
-    role: Writing – original draft
   - name: Maarten Paul
     affiliation: 1
-    role: Writing – original draft
   - name: Alireza Heidari
     affiliation: 1
-    role: Writing – original draft
   - name: Martin Etzrodt
     affiliation: 1
-    role: Writing – original draft
   - name: Beatriz Serrano-Solano
     affiliation: 1
-    role: Writing – original draft
   - name: Leonid Kostrykin
     orcid: 0000-0000-0000-0000
     affiliation: 2
-    role: Conceptualization, Writing – review & editing
 affiliations:
   - name: First Affiliation
     index: 1
   - name: ELIXIR Europe
     ror: 044rwnt51
     index: 2
-date: 8 November 2023
+date: 7 November 2025
 cito-bibliography: paper.bib
 event: BH23EU
 biohackathon_name: "BioHackathon Europe 2023"
