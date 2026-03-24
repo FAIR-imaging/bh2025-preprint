@@ -42,7 +42,7 @@ authors:  # roles should match the terms from: https://credit.niso.org
 affiliations:
   - name: Department of Computer Science, University of Freiburg, Freiburg, Germany
     index: 1
-  - name: Leiden University
+  - name: NL-BioImaging, Leiden University, Leiden, the Netherlands
     index: 2
   - name: ISCC Foundation
     index: 3
