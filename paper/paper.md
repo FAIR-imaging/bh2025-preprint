@@ -23,14 +23,14 @@ authors:  # roles should match the terms from: https://credit.niso.org
     orcid: 0000-0002-9541-3961
   - name: Maarten Paul
     affiliation: 2
-    role: Software
+    role: Software, Resources
   - name: Alireza Heidari
     affiliation: 1
     role: Software
     orcid: 0000-0003-0315-4403
   - name: Martin Etzrodt
     affiliation: 3
-    role: Software
+    role: Software, Resources
   - name: Beatriz Serrano-Solano
     affiliation: 4
     role: Conceptualization, Software, Data curation, Writing – review & editing
