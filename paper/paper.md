@@ -55,7 +55,7 @@ authors_short: Diana Chiang \emph{et al.}
 
 # Introduction
 
-As part of the BioHackathon Europe 2023, we here report...
+The growing integration  of image-based technologies across life sciences, environmental research, and other domains has intensified the need for interoperable, reproducible, and FAIR-compliant image analysis infrastructures. The ELIXIR BioHackathon Europe 2025 provided a collaborative environment to advance these goals within the Galaxy ecosystem [@extends:galaxy2024].
 
 ## Meeting information
 
