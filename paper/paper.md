@@ -21,9 +21,10 @@ authors:  # roles should match the terms from: https://credit.niso.org
     affiliation: 1
     role: Software
     orcid: 0000-0002-9541-3961
-  - name: Maarten Paul
+  - name: Maarten W. Paul
     affiliation: 2
     role: Software, Resources
+    orcid: 0000-0002-7990-6010
   - name: Alireza Heidari
     affiliation: 1
     role: Software
@@ -31,6 +32,7 @@ authors:  # roles should match the terms from: https://credit.niso.org
   - name: Martin Etzrodt
     affiliation: 3
     role: Software, Resources
+    orcid: 0000-0003-1928-3904
   - name: Beatriz Serrano-Solano
     affiliation: 4
     role: Conceptualization, Software, Data curation, Writing – review & editing
@@ -42,7 +44,7 @@ authors:  # roles should match the terms from: https://credit.niso.org
 affiliations:
   - name: Department of Computer Science, University of Freiburg, Freiburg, Germany
     index: 1
-  - name: Leiden Universiteit
+  - name: NL-BioImaging, Leiden University, Leiden, the Netherlands
     index: 2
   - name: ISCC Foundation
     index: 3
