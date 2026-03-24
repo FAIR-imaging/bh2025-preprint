@@ -152,6 +152,16 @@ The integration of the ISCC-SUM tool suite into Galaxy establishes content-based
 
 This complements Galaxy's provenance tracking and advances reproducibility toward a format-independent, FAIR-aligned model. A complementary [tutorial](https://gxy.io/GTN:T00572) ([galaxyproject/training-material/pull/6460](https://github.com/galaxyproject/training-material/pull/6460)) was also developed, highlighting the different use cases of the suite described in Section 2.2.
 
+## 3.3 | Streamlined Integrations, Tools, and Training Materials
+
+In this section, we describe the outcomes of our work on WP3, as described in Section 2.3.
+
+### 3.3.1 | Onboarding Tutorial for Newcomers
+
+Within the Galaxy Training Network, we developed a new introductory [tutorial](https://gxy.io/GTN:T00573) ([galaxyproject/training-material/pull/6603](https://github.com/galaxyproject/training-material/pull/6603)) specifically designed for newcomers to bioimage analysis in Galaxy: The tutorial, _"Where to start with bioimage analysis in Galaxy"_, provides a structured and accessible entry point into the conceptual and practical foundations of image analysis. It introduces key concepts such as pixels and voxels, 5D hyperstacks (XYZCT), bit-depth, and spatial calibration, ensuring that users understand the foundations of biological image data rather than prematurely engaging in analyses.
+
+The tutorial also guides users through handling proprietary microscopy formats via Bio-Formats [@usesMethodIn:Linkert2010], understanding OME-NGFF standards [e.g., @usesMethodIn:Moore2023], and leveraging the OMERO integration for institutional data access. Sections structured as hands-on walks guide users through practical exercises, including metadata inspection, image filtering, thresholding, and validation. To support informed methodological choices, the tutorial provides a logical decision tree to help users decide between classical computer vision workflows and AI-driven approaches. Finally, it includes a dedicated "pitfall guardrail" section highlighting common sources of error, such as JPEG compression artefacts, unintended RGB channel merging, and photobleaching effects, thereby promoting robust and reproducible image analysis practices from the outset.
+
 # Citation Typing Ontology annotation
 
 You can use [CiTO](http://purl.org/spar/cito/2018-02-12) annotations, as explained in [this BioHackathon Europe 2021 write up](https://raw.githubusercontent.com/biohackrxiv/bhxiv-metadata/main/doc/elixir_biohackathon2021/paper.md) and [this CiTO Pilot](https://www.biomedcentral.com/collections/cito).
