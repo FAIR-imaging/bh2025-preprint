@@ -164,13 +164,19 @@ The tutorial also guides users through handling proprietary microscopy formats v
 
 ### 3.3.2 | OMERO File Source Plugin
 
-As part of WP3, we significantly enhanced the integration between OMERO and Galaxy by implementing a new OMERO file source plugin directly within Galaxy. This plugin enables hierarchical browsing of OMERO's native
+As part of WP3, we significantly enhanced the integration between OMERO and Galaxy by implementing a new OMERO file source plugin ([galaxyproject/galaxy/pull/21367](https://github.com/galaxyproject/galaxy/pull/21367)) directly within Galaxy. This plugin enables hierarchical browsing of OMERO's native
 $$
 \text{Project} \rightarrow \text{Dataset} \rightarrow \text{Image}
 $$
 structure, allowing users to navigate their institutional image repositories in a structured and intuitive way. To ensure scalability, server-side pagination was introduced using HQL queries, enabling efficient browsing even for very large image collections. In addition, server-side search functionality allows users to filter projects, datasets, and images by name directly on the OMERO server, reducing data transfer overhead and improving responsiveness.
 
 The plugin also introduces a smart image download mechanism tailored to preserve data fidelity and maximise compatibility. Whenever possible, Galaxy attempts to retrieve the original imported image files, thereby preserving the native file format (with certain repository-specific limitations). If original files are not accessible, the system automatically exports multi-page TIFF files containing all Z-planes, ensuring complete volumetric data retrieval. The implementation gracefully handles restricted repositories—such as those that block direct access to original files—thereby enabling robust and FAIR-aligned interoperability between OMERO-based data management and Galaxy-based analysis workflows.
+
+### 3.3.3 | Improved Integration with Other Platforms
+
+We have updated the BioImage Archive retrieval tool in Galaxy ([bgruening/galaxytools/pull/1713](https://github.com/bgruening/galaxytools/pull/1713)), enhancing its usability. In addition, we have drafted a tool ([bgruening/galaxytools/pull/1716](https://github.com/bgruening/galaxytools/pull/1716)) for uploading image data from Galaxy to BioStudies [@providesDataFor:Sarkans2017], which the BioImage Archive builds upon. However, the tool has not yet been deployed to the Galaxy ToolShed [@citation:Blankenberg2014] due to a lack of automated test routines (BioStudies currently does not provide APIs for testing).
+
+In addition, the BiaPy integration in Galaxy has been accommodated by a [tutorial](https://gxy.io/GTN:T00571) ([galaxyproject/training-material/pull/6621](https://github.com/galaxyproject/training-material/pull/6621)) that guides the user through the process of performing inference with a deep learning model from BiaPy in Galaxy.
 
 # Citation Typing Ontology annotation
 
