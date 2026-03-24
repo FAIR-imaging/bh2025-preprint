@@ -178,49 +178,22 @@ We have updated the BioImage Archive retrieval tool in Galaxy ([bgruening/galaxy
 
 In addition, the BiaPy integration in Galaxy has been accommodated by a [tutorial](https://gxy.io/GTN:T00571) ([galaxyproject/training-material/pull/6621](https://github.com/galaxyproject/training-material/pull/6621)) that guides the user through the process of performing inference with a deep learning model from BiaPy in Galaxy.
 
-# Citation Typing Ontology annotation
+### 3.3.4 | Enhanced Tool Interoperability
 
-You can use [CiTO](http://purl.org/spar/cito/2018-02-12) annotations, as explained in [this BioHackathon Europe 2021 write up](https://raw.githubusercontent.com/biohackrxiv/bhxiv-metadata/main/doc/elixir_biohackathon2021/paper.md) and [this CiTO Pilot](https://www.biomedcentral.com/collections/cito).
-Using this template, you can cite an article and indicate _why_ you cite that article, for instance DisGeNET-RDF [@citesAsAuthority:Queralt2016].
+We have updated the integration of Cellpose [@usesMethodIn:Stringer2025] in Galaxy to improve robustness when handling microscopy data ([bgruening/galaxytools/pull/1692](https://github.com/bgruening/galaxytools/pull/1692)). The integration now explicitly requires a single-channel image as input, thereby avoiding common issues arising from multi-channel TIFF files where channel interpretation could previously lead to ambiguous or incorrect segmentation results (or total job failure). By enforcing clear channel selection prior to execution, the updated integration of Cellpose ensures more predictable behaviour and better reproducibility across diverse imaging datasets. In addition, the integration was refined to explicitly document and reference the supported Cellpose version.
 
-The syntax in Markdown is as follows: a single intention annotation looks like
-`[@usesMethodIn:Krewinkel2017]`; two or more intentions are separated
-with colons, like `[@extends:discusses:Nielsen2017Scholia]`. When you cite two
-different articles, you use this syntax: `[@citesAsDataSource:Ammar2022ETL; @citesAsDataSource:Arend2022BioHackEU22]`.
+We have also updated the integration of ilastik [@usesMethodIn:Berg2019] as an Interactive Tool in Galaxy ([usegalaxy-eu/galaxy/pull/331](https://github.com/usegalaxy-eu/galaxy/pull/331)). The tool was upgraded to version 1.4.1.post1, ensuring access to recent improvements and bug fixes from the upstream project. Support was added to export processed images as OME-Zarr directly to the Galaxy history, strengthening alignment with modern cloud-compatible bioimaging standards and facilitating downstream reuse. In addition, a bug in the Galaxy integration was resolved that previously prevented images from being properly exported from ilastik sessions into the Galaxy history, restoring seamless transfer of results into reproducible workflows.
 
-Possible CiTO typing annotation include:
+Many tools in the Galaxy ecosystem for image analysis use _label maps_ (label images) for spatial annotations (e.g., segmentation masks, regions of interest). Other tools, however, use vector-based spatial annotations. To ensure tool interoperability, we already had conversion tools implemented; which, however, only supported vector-based annotations in rigid tabular formats (e.g., coordinates and sizes of rectangles). While such a tabular format is human-readable and easy to edit manually, it is a non-standard format that has limited interoperability with external image analysis tools and platforms, which increasingly rely on GeoJSON for spatial annotations [e.g., QuPath, @citation:Bankhead2017]. Earlier attempts to introduce GeoJSON support relied on converting GeoJSON into the existing tabular structure, but this approach imposed structural constraints and restricted the supported geometries, effectively limiting interoperability to a narrow subset of shapes. To address this, the implementation was now refactored to natively process GeoJSON as the primary annotation format ([bmcv/galaxy-image-analysis/pull/160](https://github.com/BMCV/galaxy-image-analysis/pull/160)). Instead of performing intermediate format conversions, GeoJSON geometries are now rasterised directly into label maps, enabling support for a broader range of shapes, including arbitrary polygons, rectangles (not restricted to axis alignment), points, and circles. The previous tabular format remains supported for backward compatibility (internally converted into the more general GeoJSON format). This refactoring not only expanded geometric flexibility and improved compatibility with external tools, but also resolved previously undetected bugs (e.g., rectangle width and height parameters from tabular files were occasionally interchanged during rasterisation).
 
-* citesAsDataSource: when you point the reader to a source of data which may explain a claim
-* usesDataFrom: when you reuse somehow (and elaborate on) the data in the cited entity
-* usesMethodIn
-* citesAsAuthority
-* citesAsEvidence
-* citesAsPotentialSolution
-* citesAsRecommendedReading
-* citesAsRelated
-* citesAsSourceDocument
-* citesForInformation
-* confirms
-* documents
-* providesDataFor
-* obtainsSupportFrom
-* discusses
-* extends
-* agreesWith
-* disagreesWith
-* updates
-* citation: generic citation
+# 4 | Conclusion
 
+The project _"Evolving FAIR Image Analysis in Galaxy for Cross-domain and AI-ready Applications"_ at ELIXIR BioHackathon Europe 2025 advanced FAIR image analysis in Galaxy along three orthogonal axes: semantic interoperability, reproducibility validation, and streamlining of the overall user experience. By aligning ontology development, ISO-standard integration, and toolset improvements, we have laid the foundation for scalable, cross-domain, and reproducible bioimage analysis within the Galaxy ecosystem.
 
-# Results
+The work establishes both immediate practical improvements and a forward-looking framework for sustainable, standards-aligned development in the bioimaging community.
 
+# Acknowledgements
 
-# Discussion
-
-...
-
-## Acknowledgements
-
-...
+This work was developed as part of the ELIXIR BioHackathon Europe 2025. We thank *Anup Kumar* for helpful discussions about the goals of the project. We thank *Yi Sun* for help with updating the integration of ilastik in Galaxy. We thank *Riccardo Massei* for help with updating the integration of Cellpose in Galaxy and writing the BiaPy tutorial. BSS acknowledges the OSCARS project, which has received funding from the European Commission's Horizon Europe Research and Innovation programme under grant agreement No. 101129751. The authors utilised the language model ChatGPT developed by OpenAI to assist in structuring and drafting this text.
 
 ## References
