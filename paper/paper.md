@@ -77,7 +77,21 @@ WP1 focused on semantic interoperability through improvements to the EDAM Bioima
 
 Through this work package, semantic annotation became a central mechanism to enable cross-domain discovery, interoperability, and alignment with evolving community standards.
 
-# 2.2 | Citation Typing Ontology annotation
+## 2.2 | WP2: Integration of the ISCC ISO Standard in Galaxy
+
+WP2 introduced content-based validation mechanisms by integrating the [International Standard Content Code (ISCC)](https://www.iso.org/standard/77899.html) into Galaxy. To support reproducibility, the ISCC-SUM tool suite was integrated into Galaxy. This generates content-based fingerprints to validate final or intermediate results by implementing the International Standard Content Code (ISCC). ISCC-SUM is file-type agnostic and not limited to bioimaging data; it can be extended to various heterogeneous data types, such as omics data. This content-based validation complements Galaxy's workflow provenance tracing, providing format-independent reproducibility assurance aligned with FAIR principles.
+
+Three Galaxy tools were implemented: ([BMCV/galaxy-image-analysis/pull/159](https://github.com/BMCV/galaxy-image-analysis/pull/159), [BMCV/galaxy-image-analysis/pull/162](https://github.com/BMCV/galaxy-image-analysis/pull/162))
+
+1. A tool to compute ISCC codes for datasets.
+2. A tool to compare ISCC codes based on a configurable similarity threshold.
+3. A tool to filter datasets according to ISCC similarity constraints.
+
+These tools can be used to incorporate reproducibility-assuring checks as workflow steps directly into analysis pipelines in Galaxy.
+
+The integration of the ISCC-SUM tool suite into Galaxy enhances the AI-readiness of the platform. In this context, ISCC codes have several advantages. One advantage is that ISCC codes enable deduplication and dataset cleaning, which is important for removing redundant training data to prevent bias from over-represented samples. Another advantage is that they allow grouping similar (or dissimilar) data. This can be used, for example, during model training, to select test sets that truly evaluate the generalization of the model. When using pre-trained models, this can also be used to determine whether the image data used in an analysis is too different from the training data (out-of-distribution data), and thus to decide whether a tool or model is appropriate for that image data. Moreover, ISCC codes can also be used to verify data integrity, thus generally enhancing the trustworthiness of analyses.
+
+# Citation Typing Ontology annotation
 
 You can use [CiTO](http://purl.org/spar/cito/2018-02-12) annotations, as explained in [this BioHackathon Europe 2021 write up](https://raw.githubusercontent.com/biohackrxiv/bhxiv-metadata/main/doc/elixir_biohackathon2021/paper.md) and [this CiTO Pilot](https://www.biomedcentral.com/collections/cito).
 Using this template, you can cite an article and indicate _why_ you cite that article, for instance DisGeNET-RDF [@citesAsAuthority:Queralt2016].
