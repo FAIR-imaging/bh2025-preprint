@@ -11,6 +11,7 @@ tags:
 authors:
   - name: Diana Chiang
     affiliation: 1
+    role: Conceptualization, Writing – review & editing
   - name: Pavankumar Videm
     affiliation: 1
   - name: David Lopez Tabernero
