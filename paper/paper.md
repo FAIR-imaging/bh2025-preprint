@@ -44,7 +44,7 @@ event: BH25EU
 biohackathon_name: "BioHackathon Europe 2025"
 biohackathon_url:   "https://biohackathon-europe.org/"
 biohackathon_location: "Berlin, Germany, 2025"
-group: Project 9
+group: 'Project 9: Evolving FAIR Image Analysis in Galaxy for Cross-domain and AI-ready Applications'
 # URL to project git repo --- should contain the actual paper.md:
 git_url: https://github.com/FAIR-imaging/bh2025-preprint
 # This is the short authors description that is used at the
