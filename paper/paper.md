@@ -16,9 +16,11 @@ authors:  # roles should match the terms from: https://credit.niso.org
   - name: Pavankumar Videm
     affiliation: 1
     role: Software
+    orcid: 0000-0002-5192-126X
   - name: David Lopez Tabernero
     affiliation: 1
     role: Software
+    orcid: 0000-0002-9541-3961
   - name: Maarten Paul
     affiliation: 2
     role: Software
