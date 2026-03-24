@@ -16,22 +16,28 @@ authors:
   - name: David Lopez Tabernero
     affiliation: 1
   - name: Maarten Paul
-    affiliation: 1
+    affiliation: 2
   - name: Alireza Heidari
     affiliation: 1
   - name: Martin Etzrodt
-    affiliation: 1
+    affiliation: 3
   - name: Beatriz Serrano-Solano
-    affiliation: 1
+    affiliation: 4
+    orcid: 0000-0002-5862-6132
   - name: Leonid Kostrykin
-    orcid: 0000-0000-0000-0000
-    affiliation: 2
+    affiliation: 5
+    orcid: 0000-0003-1323-3762
 affiliations:
-  - name: First Affiliation
+  - name: Department of Computer Science, University of Freiburg, Freiburg, Germany
     index: 1
-  - name: ELIXIR Europe
-    ror: 044rwnt51
+  - name: Leiden Universiteit
     index: 2
+  - name: ISCC Foundation
+    index: 3
+  - name: Euro-BioImaging ERIC Bio-Hub, European Molecular Biology Laboratory (EMBL), Heidelberg, Germany
+    index: 4
+  - name: Biomedical Computer Vision Group, Heidelberg University, BioQuant, Heidelberg, ELIXIR Germany
+    index: 5
 date: 7 November 2025
 cito-bibliography: paper.bib
 event: BH25EU
