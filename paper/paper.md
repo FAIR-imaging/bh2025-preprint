@@ -103,6 +103,55 @@ Further work included substantial improvements to Galaxy tool integrations, tool
 
 Collectively, WP3 improved both the technical foundation and the user-facing experience for bioimage analysis in Galaxy.
 
+# 3 | Results
+
+Most of our work concerned the implementation of tools and tutorials as described in Section 2. In this section, we provide further results and highlight specific developments.
+
+## 3.1 | A Curated Semantic Framework for Bioimage Analysis
+
+A key result of the project is the development and application of a curated set of annotation terms aligned with the EDAM Bioimaging ontology. These terms were used to annotate tutorials within the Galaxy Training Network and reflect real-world bioimage analysis practice in Galaxy.
+
+The curated term set includes:
+
+- Cell segmentation
+- Object feature extraction
+- Image thresholding
+- High-throughput screening
+- Fluorescence microscopy
+- Tissue imaging
+- Conversion
+- Object counting
+- Overlay
+- Cell tracking
+- Multi-channel image
+- Data management
+- Data handling
+- Data sharing
+- Parameter optimisation
+- Validation
+- ROI selection
+- Temporal analysis
+- Time-lapse data
+- Image annotation
+- Deep learning
+- Data decomposition
+- Rasterization
+- Tessellation
+- Bioimaging
+
+This structured vocabulary improves tutorial discoverability, supports fine-grained categorisation, and prepares the ecosystem for future ontology harmonisation.
+
+## 3.2 | Format-independent Reproducibility via ISCC
+
+The integration of the ISCC-SUM tool suite into Galaxy establishes content-based reproducibility validation across heterogeneous data types. Unlike checksum-based validation, which is sensitive to file representation, ISCC codes provide similarity-aware fingerprints. This enables:
+
+- Validation of intermediate and final workflow outputs
+- Threshold-based similarity comparisons
+- Cross-format reproducibility checks
+- Extension beyond imaging to omics and other data domains
+
+This complements Galaxy's provenance tracking and advances reproducibility toward a format-independent, FAIR-aligned model. A complementary [tutorial](https://gxy.io/GTN:T00572) ([galaxyproject/training-material/pull/6460](https://github.com/galaxyproject/training-material/pull/6460)) was also developed, highlighting the different use cases of the suite described in Section 2.2.
+
 # Citation Typing Ontology annotation
 
 You can use [CiTO](http://purl.org/spar/cito/2018-02-12) annotations, as explained in [this BioHackathon Europe 2021 write up](https://raw.githubusercontent.com/biohackrxiv/bhxiv-metadata/main/doc/elixir_biohackathon2021/paper.md) and [this CiTO Pilot](https://www.biomedcentral.com/collections/cito).
